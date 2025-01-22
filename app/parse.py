@@ -17,7 +17,7 @@ class Quote:
 QUOTE_FIELDS = [field.name for field in fields(Quote)]
 
 
-def parse_single_quote(quote) -> Quote:
+def parse_single_quote(quote: Tag) -> Quote:
     tags = [tag.text for tag in quote.select(".tag")]
 
     return Quote(
